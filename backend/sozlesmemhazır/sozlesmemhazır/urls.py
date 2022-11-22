@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from home.views import *
+from pdfhazir.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",sayfa,name="orenk"),
+    path("pdf/",GeneratePdf.as_view(),name="pdf")
 ]
